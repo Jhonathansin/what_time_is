@@ -1,3 +1,11 @@
+var myHeaders = new Headers()
+myHeaders.set('Access-Control-Allow-Origin:', '*')
+
+var myInit = { method: 'GET',
+               headers: myHeaders,
+               mode: 'cors',
+               cache: 'default' };
+
 function localidadesAleatorias (array, quantidade) {
     const localidades = []
     const tamanho = array.length
@@ -60,7 +68,7 @@ async function horarioLocalidade(localidade) {
         fuso: "",
         localidade: "",
     }
-    await fetch(`http://worldtimeapi.org/api/timezone/${localidade}`).then( async response => {
+    await fetch(`http://worldtimeapi.org/api/timezone/${localidade}`, myInit).then( async response => {
         return await response.json()
     }).then(objeto => {
         const ano = objeto["datetime"].slice(0, 4)
@@ -100,7 +108,7 @@ function requisicaoLocalidades() {
     }
 
 
-    fetch("http://worldtimeapi.org/api/timezone").then(async response => {
+    fetch("http://worldtimeapi.org/api/timezone", myInit).then(async response => {
         return await response.json()
     }).then(async array => {
         const objetoLocais = []
