@@ -169,6 +169,8 @@ footer p:first-of-type a:hover {
 
 #sobre {
     width: 60%;
+    overflow-wrap: anywhere;
+    padding: 5px;
 }
 
 #logo {
@@ -177,6 +179,7 @@ footer p:first-of-type a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 #logo h1 {
