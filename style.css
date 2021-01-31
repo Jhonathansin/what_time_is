@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+.pagina-atual {
+    background-color: #fdd43c;
+    box-shadow: -3px 3px 0.8em  #fdd43c;
+    padding: 5px;
+    cursor: default;
+}
+
+.selecionar-pagina {
+    background-color: #aa5b1b55;
+    color: #fdd43c;
+    box-shadow: -3px 3px 5px 3px  #65360f;
+    padding: 5px;
+}
+
+.selecionar-pagina:hover {
+    transition: 0.4s ease;
+    transform: translateY(-2px);
+}
+
+body {
+    display: grid;
+    grid-template-rows: 20vh minmax(70vh, max-content) 10vh !important;
+    background-image: url(background.png);
+    background-size: 100%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #65360fdd;
+    color: #fdd43c !important;
+    flex-wrap: wrap;
+    height: fit-content
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    font-family: "Caveat";
+    background-color: #00000022;
+    width: 220px;
+    border-radius: 8px;
+
+}
+
+header h1 a {
+    display: flex;
+    text-decoration: none;
+    color: #fdd43c;
+    font-size: 0.8em;
+    font-family: Caveat;
+}
+
+header h1 a img {
+    height: 1.2em;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    margin-left: 20px;
+    min-width: 150px;
+    color: #65360f;
+}
+
+main {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main div {
+    min-width: 260px;
+    min-height: 100px;
+    height: fit-content;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10p;
+    padding: 10px;
+    background-color: #fdd43ccc;
+    border-radius: 20px;
+    box-shadow: -5px 5px 0.5em  #65360f;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+
+main div p#pais {
+    margin-top: 10px;
+}
+
+main > div > p.carregando2 {
+    background-image: url(./carregando2.gif);
+    align-self: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+}
+
+
+
+main div p select {
+    width: 80%;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+main div p select.carregando {
+    background-image: url(./carregando.gif);
+    background-color: white;
+    color: transparent;
+}
+
+.carregandoAnimacao {
+    background-image: url(./carregando2.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px;
+    color: transparent;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #65360fdd;
+    color: #fdd43c !important;
+    flex-wrap: wrap;
+}
+
+footer p:first-of-type a {
+    text-decoration: none;
+    color: #fdd43c;
+}
+
+footer p:first-of-type a:hover {
+    transition: 0.4s ease;
+    color: #fdd43c;
+    background-color: #00000044;
+    border-radius: 8px;
+    padding: 8px 8px;
+}
+
+#sobre {
+    width: 60%;
+}
+
+#logo {
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo h1 {
+    display: flex;
+    align-items: center;
+    font-family: Caveat;
+}
+
+#logo h1 img {
+    width: 1em;
+}
+
+#logo p {
+    margin-top: 15px;
+}
+
+#logo p a {
+    color: blue;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 700px) {
+    main div {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        padding: 0;
+        justify-content: center;
+    }
+    main div {
+        width: 94%;
+        margin: 15px 0 0 0;
+    }
+}

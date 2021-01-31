@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="hour.svg" type="image/x-icon">
+    <title>What Time is</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="./index.html"><img src="hour.svg" alt="Loog"> What Time Is?</a>
+        </h1>
+        <nav>
+            <a href="./index.html" class="selecionar-pagina">Página Inicial</a>
+            <a href="./consultar_ip.html" class="selecionar-pagina">Consultar Por IP</a>
+            <a href="#" class="pagina-atual">Consultar Por Local</a>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <p>
+                <select name="continentes" id="continentes">
+                    <option disabled selected>Selecione um continente</option>
+                    <option value="Africa">Africa</option>
+                    <option value="America">America</option>
+                    <option value="Antarctica">Antarctica</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Atlantic">Atlantic</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Etc">Etc</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Indian">Indian</option>
+                    <option value="Pacific">Pacific</option>
+                </select>
+            </p>
+            <p>
+                <select name="paises" id="paises">
+                    <option disabled selected>Selecione...</option>
+                </select>
+            </p>
+
+            <p id="pais"></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <a href="./sobre.html">Sobre</a>
+        </p>
+        <p>Este site não faz uso de Cookies.</p>
+    </footer>
+
+    <script src="consultarLocal.js"></script>
+</body>
+</html>
