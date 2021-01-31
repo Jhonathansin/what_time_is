@@ -14,7 +14,7 @@ function paraAnimacaoPaises() {
 selectContinentes.onchange = function() {
     document.querySelector("#pais").innerHTML = ""
     animacaoPaises()
-    fetch(`http://worldtimeapi.org/api/timezone/${this.value}`).then(async response => {
+    fetch(`https://worldtimeapi.org/api/timezone/${this.value}`).then(async response => {
         paraAnimacaoPaises()
         return await response.json()
     }).then(paises => {
@@ -51,7 +51,7 @@ function paraAnimacaoPais() {
 paises.onchange = function() {
     document.querySelector("#pais").innerHTML = ""
     animacaoPais()
-    fetch(`http://worldtimeapi.org/api/timezone/${this.value}`).then(async response => {
+    fetch(`https://worldtimeapi.org/api/timezone/${this.value}`).then(async response => {
         paraAnimacaoPais()
         return await response.json()
     }).then(pais => {

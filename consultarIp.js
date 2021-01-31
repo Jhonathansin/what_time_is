@@ -12,7 +12,7 @@ async function horarioIp() {
 
     document.querySelector("main").append(div)
     animacaoCarregamento(document.querySelector(`#tabela-horario-0`))
-    fetch(`http://worldtimeapi.org/api/ip`).then(async response => {
+    fetch(`https://worldtimeapi.org/api/ip`).then(async response => {
         return await response.json()
     }).then(obj => {
         const localidade = obj["timezone"]
