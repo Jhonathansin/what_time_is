@@ -1,6 +1,6 @@
 var myHeaders = new Headers()
-myHeaders.append('Access-Control-Allow-Origin:', '*')
-// myHeaders.set('Access-Control-Allow-Origin:', '*')
+myHeaders.set('Access-Control-Allow-Origin', "*")
+// myHeaders.set('AccessControlAllowOrigin:', '*')
 
 var myInit = { method: 'GET',
                headers: myHeaders,
