@@ -29,7 +29,7 @@
 
 body {
     display: grid;
-    grid-template-rows: 20vh minmax(70vh, max-content) 10vh !important;
+    grid-template-rows: minmax(20vh, auto) minmax(70vh, max-content) 10vh !important;
     background-image: url(background.png);
     background-size: 100%;
     background-position-y: center;
@@ -68,12 +68,16 @@ header h1 a img {
     height: 1.2em;
 }
 
-header nav {
+header > nav {
     display: flex;
+    max-height: auto;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap !important;
 }
 
 header nav a {
+    margin-top: 10px;
     text-decoration: none;
     margin-left: 20px;
     min-width: 150px;
